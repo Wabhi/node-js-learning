@@ -33,10 +33,26 @@ const user ={
     email:"abhishek@gmail.com",
     address:"HSR Layout",
     phone:"123-333-485",
-    Role: "SDE-1"
+    Role: "SDE-1",
+    skills:['html','css','javascript','react','nextjs','ga','gtm','redux','mui','styled component','nodejs']
+}
+  app.render('profile',{user});
+});
+app.get("/profile", (req, res) => {
+//   res.sendFile(`${filePath}/404.html`);
+const user ={
+    name:"Abhishek Tiwari",
+    email:"abhishek@gmail.com",
+    address:"HSR Layout",
+    phone:"123-333-485",
+    Role: "SDE-1",
+    skills:['html','css','javascript','react','nextjs','ga','gtm','redux','mui','styled component','nodejs']
 }
   app.render('profile',{user});
 });
 
+app.get("/sign-in", (req, res) => {
+    app.render('sign-in')
+})
 
 app.listen(5000)
